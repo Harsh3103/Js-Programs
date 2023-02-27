@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Even and Odd Numbers</title>
+</head>
+<body>
+	<script>
+		var arr = [];
+		var oddNumbers = [];
+		var userInput = prompt("Enter a number Enter 0 to exit");
+		var number = parseInt(userInput);
+
+		while(number !== 0) {
+			if(number % 2 === 0) {
+				// If the number is even, add it to the evenNumbers array
+				evenNumbers.push(number);
+			} else {
+				// If the number is odd, add it to the oddNumbers array
+				oddNumbers.push(number);
+			}
+
+			userInput = prompt("Enter a number Enter 0 to exit");
+			number = parseInt(userInput);
+		}
+
+		// Print even numbers
+		document.write("<h2>Even Numbers</h2>");
+		for(var i = 0; i < evenNumbers.length; i++) {
+			document.write(evenNumbers[i] + "<br>");
+		}
+
+		// Print odd numbers
+		document.write("<h2>Odd Numbers</h2>");
+		for(var i = 0; i < oddNumbers.length; i++) {
+			document.write(oddNumbers[i] + "<br>");
+		}
+	</script>
+</body>
+</html>

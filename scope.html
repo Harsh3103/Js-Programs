@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 100px;
+        padding: 0;
+        background-image: url('C:/Users/91981/Documents/Harsh Mohali/9.png');
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #9931c9;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #00c0e2;
+      }
+      h1 {
+        text-align: center;
+        color: #ffdd00;
+      }
+      input[type="text"] {
+        width: 96%;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      input[type="button"] {
+        width: 35%;
+        padding: 10px;
+        margin-left: 40px;
+        margin-right: 45px;
+        margin-bottom: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="button"]:hover {
+        background-color: #3e8e41;
+      }
+      input[type="button"]:active {
+        background-color: #3e8e41;
+        box-shadow: 0px 2px #ffffff;
+        transform: translateY(1px);
+      }
+    </style>
+    <script>
+       function c1() {
+          
+        
+        
+        document.getElementById("num1").value=" ";}
+        function c2() {
+          
+          document.getElementById("num2").value=" ";}
+        
+        function add()
+        {
+        var a= document.getElementById("num1").value;
+        
+        var b =document.getElementById("num2").value;
+        document.getElementById("num3").value =parseInt(a)+ parseInt(b);
+        }
+        
+        function subtract()
+        
+        {
+        
+        var a= document.getElementById("num1").value; 
+        var b= document.getElementById("num2").value;
+        document.getElementById("num3").value = parseInt(a)-parseInt(b);
+        
+        }
+        
+        function multiply()
+        
+        {
+        
+        var a = document.getElementById("num1").value;
+        
+        var b= document.getElementById("num2").value;
+        document.getElementById("num3").value = parseInt(a) *parseInt(b);
+        
+        }
+         function divide()
+         {
+            var a = document.getElementById("num1").value;
+        
+        var b= document.getElementById("num2").value;
+        document.getElementById("num3").value = parseInt(a) /parseInt(b);
+         }
+         function fact()
+			{
+				var x= document.getElementById("num1").value;
+				var fact=1;
+				while(x>=1)
+				{ 
+					fact=fact*x;
+					x--;
+				}
+				document.getElementById("num3").value= fact;
+			}
+			function concat()
+			{
+				var a = document.getElementById("num1").value;	
+				var b = document.getElementById("num2").value;
+                document.getElementById("num3").value = "" + a + b;
+				//alert(a+b);
+
+
+			}
+      function myfunc(x){
+        x.style.background="yellow";
+      }
+      function preferedbrowser(){
+        var stream = document.getElementById("browsers").value;
+        alert("Your browser has been changed to $" + stream);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1><marquee direction="right">Calculator</h1></marquee>
+      <input type="text" id="num1" value="Enter a Number" onclick="c1()" onmouseout="myfunc()" onblur="myfunc(this)"/>
+      <br />
+      <input type="text" id="num2" value="Enter a Number" onclick="c2()"  onfocus="myfunc(this)"/>
+      <br />
+      <input type="text" value="Result" id="num3" />
+      <br />
+      <input type="button" value="ADD" onclick="add()" />
+      <input type="button" value="SUBTRACT" onclick="subtract()" />
+      <input type="button" value="MULTIPLY" onclick="multiply()" />
+      <input type="button" value="DIVIDE" onclick="divide()" />
+      <br />
+      <input type="button" value="FACTORIAL" onclick="fact()" />
+      <input type="button" value="CONCATENATE" onclick="concat()" />
+      <select id="browsers" onchange="preferedbrowser()">
+        <option value="chrome">chrome</option>
+        <option value="firefox">firefox</option>
+        <option value="edge">edge</option>
+      </select>
+    </div>
+    <div oncopy="alert('Copying forbidden!');return false">
+      Dear user,
+      The copying is forbidden for you.
+      If you know JS or HTML, then you can get everything from the page source though.
+    </div>
+  </body>
+</html>
